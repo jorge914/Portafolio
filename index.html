@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="fade-in">
+    <!-- Menu -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#inicio">JLRR</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li class="with-after" id="sobre-mi"><a href="#sobremi" data-translate="sobremi">SOBRE MI</a></li>
+            <li class="with-after"><a href="#curriculum">CURRICULUM</a></li>
+            <li class="with-after">
+              <a href="#portfolio" data-translate="portafolio">PORTAFOLIO</a>
+            </li>
+            <li class="with-after"><a href="#contacto" data-translate="contacto">CONTACTO</a></li>
+            <li>
+              <select id="language-select">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!--Inicio-->
+    <div class="contenedor-principal slide-in-up">
+      <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+          <div class="contenedor-img">
+            <img src="img/perfil.jpeg" alt="" />
+          </div>
+          <h1 data-translate="name">JORGE LUIS RODRIGUEZ ROMO</h1>
+          <h2 data-translate="profession">Front-End Developer</h2>
+          <div class="redes">
+            <a
+              href="https://www.linkedin.com/in/jorge-luis-rodríguez-romo-9b5787211/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/jorge914" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="CV.pdf" download="CV_Jorge_Rodriguez"
+              ><i class="fa-solid fa-file"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- sobre mi -->
+      <section id="sobremi" class="sobremi slide-in-left">
+  <div class="contenido-sobremi">
+    <h2 data-translate="aboutMeTitle">Sobre Mí</h2>
+    <p data-translate="aboutMeText">
+      <span>¡Hola!</span>
+      Soy un Desarrollador web especializado en Front-End con conocimientos en Back-end. Siempre busco mejorar mis habilidades y adaptarme a nuevas tecnologías.
+    </p>
+    <h2 data-translate="Tskills">Habilidades</h2>
+    <div class="skills">
+      <div class="skill">
+        <img src="img/html.png" alt="HTML" />
+        <div class="overlay">HTML</div>
+      </div>
+      <div class="skill">
+        <img src="img/css-3.png" alt="CSS" />
+        <div class="overlay">CSS</div>
+      </div>
+      <div class="skill js">
+        <img src="img/js.png" alt="JavaScript" />
+        <div class="overlay">JavaScript</div>
+      </div>
+      <div class="skill">
+        <img src="img/vuejs.png" alt="Vue" />
+        <div class="overlay">Vue</div>
+      </div>
+      <div class="skill">
+        <img src="img/nodejs.png" alt="Node.js" />
+        <div class="overlay">Node.js</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+      <div class="contenido-seccion">
+        <h2 data-translate="curriculum">Curriculum</h2>
+        <div class="fila">
+          <div class="col izquierda">
+            <h3 data-translate="education">Educación</h3>
+            <div class="item izq">
+              <h4>Tecnico en informatica</h4>
+              <span class="casa">Conalep plantel 1</span>
+              <span class="fecha">2015 - 2018</span>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Ingenieria en Sistemas Computacionales</h4>
+              <span class="casa"
+                >Instituto tecnologio de mexico campus culiacan</span
+              >
+              <span class="fecha">2018 - 2024</span>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col derecha">
+            <h3  data-translate="workExperience">Experiencia de trabajo</h3>
+            <div class="item der">
+              <h4>Front Developer</h4>
+              <span class="casa"
+                >Instituto tecnologio de mexico campus culiacan</span
+              >
+              <span class="fecha">2023 - 2024</span>
+              <p data-translate="workExperience">
+                <ul>
+                  <li data-translate="workDetails.item1">Desarrollé aplicaciones web con Vue.js y Node.js.</li>
+                  <li data-translate="workDetails.item2">Creé interfaces dinámicas y responsivas usando Vuetify.</li>
+                  <li data-translate="workDetails.item3">Integré bases de datos SQL Server para una gestión eficiente.</li>
+                  <li data-translate="workDetails.item4">Colaboré con equipos multidisciplinarios en soluciones tecnológicas.</li>
+                  <li data-translate="workDetails.item5">Participé en todas las fases del ciclo de desarrollo de software.</li>
+                </ul>
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+            <div class="item der">
+              <h4>Tecnico en campo</h4>
+              <span class="casa">Sistemas y Enlaces</span>
+              <span class="fecha">2022 - 2023</span>
+              <p data-translate="workExperience">
+                <ul>
+                  <li data-translate="fieldTechDetails.item1">Instalé y mantuve cableado de red en empresas.</li>
+                  <li data-translate="fieldTechDetails.item2">Experiencia en instalación de cables de fibra óptica.</li>
+                  <li data-translate="fieldTechDetails.item3">Instalación de cámaras de seguridad.</li>
+                  <li data-translate="fieldTechDetails.item4">Configuración de racks de servidores.</li>
+                  <li data-translate="fieldTechDetails.item5">Conocimiento en cableado estructurado.</li>
+                </ul>
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <h2 data-translate="portfolio">PORTFOLIO</h2>
+       
+      </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+      <div class="contenido-seccion">
+        <h2 data-translate="contact">CONTACTO</h2>
+        <div class="fila">
+          <!-- Formulario -->
+          <div class="col">
+            <input type="text" placeholder="Tú Nombre" />
+            <input type="text" placeholder="Número telefónico" />
+            <input type="text" placeholder="Dirección de correo" />
+            <input type="text" placeholder="Tema" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+            ></textarea>
+            <button>
+              Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+              <span class="overlay"></span>
+            </button>
+          </div>
+          <!-- Mapa -->
+          <div class="col">
+            <img src="img/mapa.bmp" alt="" />
+            <div class="info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  Coníferas 3939B, Jardines del Valle, 80189 Culiacán Rosales, Sin.
+                </li>
+                <li>
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  Llamame: 6673683818
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  Email: jorge2rr@gmail.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+    </footer>
+
+    <script src="scrip.js"></script>
+  </body>
+</html>
