@@ -31,8 +31,12 @@ const translations = {
       "¡Hola! Soy un Desarrollador web especializado en Front-End con conocimientos en Back-end.",
     curriculum: "Curriculum",
     workExperience: "Experiencia de trabajo",
+    education: "Educacion",
+    ITTechnician: "Tecnico en informatica",
+    Engineering: "Ingenieria en Sistemas Computacionales",
     portfolio: "Portafolio",
     contact: "Contacto",
+    NetworkTechnician: "Técnico de Instalación y Mantenimiento de Redes",
     workDetails: {
       item1: "Desarrollé aplicaciones web con Vue.js y Node.js.",
       item2: "Creé interfaces dinámicas y responsivas usando Vuetify.",
@@ -49,6 +53,11 @@ const translations = {
       item4: "Configuración de racks de servidores.",
       item5: "Conocimiento en cableado estructurado.",
     },
+    placeholderName: "Tú Nombre",
+    placeholderPhone: "Número telefónico",
+    placeholderEmail: "Dirección de correo",
+    placeholderSubject: "Tema",
+    placeholderMessage: "Mensaje",
   },
   en: {
     inicio: "HOME",
@@ -64,8 +73,12 @@ const translations = {
       "Hello! I'm a web developer specialized in Front-End with knowledge in Back-End.",
     curriculum: "Curriculum",
     workExperience: "Work Experience",
+    education: "Education",
+    ITTechnician: "IT Technician",
+    Engineering: "Computer Systems Engineering",
     portfolio: "Portfolio",
     contact: "Contact",
+    NetworkTechnician: "Network Installation and Maintenance Technician",
     workDetails: {
       item1: "Developed web applications with Vue.js and Node.js.",
       item2: "Created dynamic and responsive interfaces using Vuetify.",
@@ -82,6 +95,11 @@ const translations = {
       item4: "Configuration of server racks.",
       item5: "Knowledge in structured cabling.",
     },
+    placeholderName: "Your Name",
+    placeholderPhone: "Phone Number",
+    placeholderEmail: "Email Address",
+    placeholderSubject: "Subject",
+    placeholderMessage: "Message",
   },
 };
 
@@ -105,6 +123,17 @@ function changeLanguage(language) {
       element.textContent = translation;
     }
   });
+
+  const placeholders = document.querySelectorAll(
+    "input[placeholder], textarea[placeholder]"
+  );
+  placeholders.forEach((input) => {
+    const placeholderKey = `placeholder${
+      input.name.charAt(0).toUpperCase() + input.name.slice(1)
+    }`;
+    input.placeholder =
+      translations[language][placeholderKey] || input.placeholder;
+  });
 }
 
 window.addEventListener("load", function () {
@@ -121,3 +150,50 @@ document
 
 // Establecer el idioma inicial (español por defecto)
 changeLanguage("es");
+
+(function () {
+  emailjs.init("yva9JteIlPSkvRqUk"); // Asegúrate de que el ID del servicio es correcto
+})();
+
+document
+  .querySelector("#contacto button")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Prevenir que el formulario se envíe de manera tradicional
+
+    // Crear el objeto con los datos del formulario
+    var formData = {
+      name: document.querySelector("[name='Name']").value,
+      phone: document.querySelector("[name='Phone']").value,
+      email: document.querySelector("[name='Email']").value,
+      subject: document.querySelector("[name='Subject']").value,
+      message: document.querySelector("[name='Message']").value,
+    };
+
+    // Validación simple (asegurarse de que no haya campos vacíos)
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Por favor, completa todos los campos requeridos.");
+      return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(formData.email)) {
+      alert("Por favor, ingresa un correo electrónico válido.");
+      return;
+    }
+
+    // Enviar el formulario usando EmailJS
+    emailjs.send("service_jztzgmn", "template_lbeoekp", formData).then(
+      function (response) {
+        console.log("Correo enviado con éxito", response);
+        alert("¡Mensaje enviado con éxito!");
+        // Limpiar los campos del formulario después de un envío exitoso
+        document.querySelector("#contacto").reset();
+      },
+      function (error) {
+        console.log("Error al enviar el correo", error);
+        alert(
+          "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo."
+        );
+      }
+    );
+  });

@@ -18,7 +18,7 @@
     <div class="contenedor-header">
       <header>
         <div class="logo">
-          <a href="#inicio">JLRR</a>
+          <a href="#">JLRR</a>
         </div>
         <nav id="nav">
           <ul>
@@ -47,7 +47,7 @@
       <section id="inicio" class="inicio">
         <div class="contenido-banner">
           <div class="contenedor-img">
-            <img src="img/perfil.jpeg" alt="" />
+            <img src="img/fotoperfil.jpg" alt="" />
           </div>
           <h1 data-translate="name">JORGE LUIS RODRIGUEZ ROMO</h1>
           <h2 data-translate="profession">Front-End Developer</h2>
@@ -97,6 +97,14 @@
         <img src="img/nodejs.png" alt="Node.js" />
         <div class="overlay">Node.js</div>
       </div>
+       <div class="skill">
+        <img src="img/java.png" alt="Java" />
+        <div class="overlay">Java</div>
+      </div>
+       <div class="skill">
+        <img src="img/sql.png" alt="SQL" />
+        <div class="overlay">SQL</div>
+      </div>
     </div>
   </div>
 </section>
@@ -111,7 +119,7 @@
           <div class="col izquierda">
             <h3 data-translate="education">Educación</h3>
             <div class="item izq">
-              <h4>Tecnico en informatica</h4>
+              <h4 data-translate="ITTechnician">Tecnico en informatica</h4>
               <span class="casa">Conalep plantel 1</span>
               <span class="fecha">2015 - 2018</span>
               <div class="conectori">
@@ -119,7 +127,7 @@
               </div>
             </div>
             <div class="item izq">
-              <h4>Ingenieria en Sistemas Computacionales</h4>
+              <h4 data-translate="Engineering">Ingenieria en Sistemas Computacionales</h4>
               <span class="casa"
                 >Instituto tecnologio de mexico campus culiacan</span
               >
@@ -152,7 +160,7 @@
               </div>
             </div>
             <div class="item der">
-              <h4>Tecnico en campo</h4>
+              <h4 data-translate="NetworkTechnician">Técnico de Instalación y Mantenimiento de Redes</h4>
               <span class="casa">Sistemas y Enlaces</span>
               <span class="fecha">2022 - 2023</span>
               <p data-translate="workExperience">
@@ -188,31 +196,27 @@
         <div class="fila">
           <!-- Formulario -->
           <div class="col">
-            <input type="text" placeholder="Tú Nombre" />
-            <input type="text" placeholder="Número telefónico" />
-            <input type="text" placeholder="Dirección de correo" />
-            <input type="text" placeholder="Tema" />
+            <input type="text" name="Name" placeholder="Tú Nombre" />
+            <input type="text" name="Phone" placeholder="Número telefónico" />
+            <input type="text" name="Email" placeholder="Dirección de correo" />
+            <input type="text" name="Subject" placeholder="Tema" />
             <textarea
-              name=""
+              name="Message"
               id=""
               cols="30"
               rows="10"
               placeholder="Mensaje"
-            ></textarea>
-            <button>
+              ></textarea>
+              <button type="submit">
               Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
               <span class="overlay"></span>
-            </button>
+              </button>
+
           </div>
-          <!-- Mapa -->
+          <!-- contacto info -->
           <div class="col">
-            <img src="img/mapa.bmp" alt="" />
             <div class="info">
               <ul>
-                <li>
-                  <i class="fa-solid fa-location-dot"></i>
-                  Coníferas 3939B, Jardines del Valle, 80189 Culiacán Rosales, Sin.
-                </li>
                 <li>
                   <i class="fa-solid fa-mobile-screen"></i>
                   Llamame: 6673683818
@@ -236,5 +240,7 @@
     </footer>
 
     <script src="scrip.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   </body>
 </html>

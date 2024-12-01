@@ -147,12 +147,12 @@ body::before {
     transform-origin: bottom left;
 }
 
-/* Estilos por defecto (en pantallas grandes) */
+
 #sobre-mi {
     display: block;
 }
 
-/* Media query para pantallas pequeñas */
+
 @media (max-width: 980px) {
     #sobre-mi {
         display: none;
@@ -174,7 +174,7 @@ body::before {
     transition: all 0.3s ease;
 }
 
-/* Triángulo indicador personalizado para el desplegable */
+
 #language-select::after {
     content: "▼";
     font-size: 12px;
@@ -182,7 +182,7 @@ body::before {
     margin-left: 10px;
 }
 
-/* Efecto hover */
+
 #language-select:hover {
     background-color: #666;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
@@ -405,7 +405,7 @@ body::before {
 }
 
 .curriculum .fila .col {
-    width: 49%;
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -574,7 +574,6 @@ body::before {
 
 /* SECCION CONTACTO */
 .contacto {
-    background-image: url(img/contact_bg.png);
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
@@ -648,8 +647,9 @@ body::before {
 }
 
 .contacto .col .info {
+    font-size: large;
     position: absolute;
-    top: 40%;
+    top: 20%;
     background-color: #252A2E;
     padding: 20px;
     margin-top: 150px;
@@ -698,7 +698,7 @@ footer .arriba {
 
 
 
-/* Define la animación fade-in */
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -711,7 +711,7 @@ footer .arriba {
 }
 
 
-/* Animación de deslizamiento desde la izquierda */
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-100%);
@@ -796,6 +796,10 @@ footer .arriba {
         padding-top: 80px;
     }
 
+    .inicio .contenido-banner {
+        margin-top: -80px;
+    }
+
     .sobremi {
         padding-top: 10px;
         width: 90%;
@@ -812,7 +816,6 @@ footer .arriba {
         height: auto;
     }
 
-    /* Sección "Inicio" */
     .inicio {
         flex-direction: column;
         height: auto;
@@ -828,6 +831,7 @@ footer .arriba {
 }
 
 @media screen and (max-width:700px) {
+
     .portfolio .galeria {
         display: block;
         width: 100%;
@@ -854,13 +858,136 @@ footer .arriba {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
 
-    .sobremi {
+
+    .fila {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .col.izquierda,
+    .col.derecha {
+        margin-bottom: 20px;
+    }
+
+    .curriculum .fila .izquierda {
+        border: none;
+        margin-left: 20px;
+    }
+
+    .curriculum .fila .derecha {
+        border: none;
+        margin-right: 20px;
+    }
+
+    .item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #34eb89;
+        border-radius: 8px;
+        background-color: #1b1b1b;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .conectori,
+    .conectord {
+        display: none;
+    }
+
+    .circuloi,
+    .circulod {
+        display: none;
+    }
+
+    .contenido-seccion h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .col h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .item p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .item ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-header header {
+        flex-direction: row;
+    }
+
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .inicio .contenido-banner {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .skills .skill {
+        width: 60px;
+        height: 60px;
+    }
+
+    .portfolio .galeria .proyecto {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contacto .fila {
+        flex-direction: column;
+    }
+
+    .contacto .col {
         width: 100%;
     }
 
-    .skills img {
-        width: 50px;
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .sobremi {
+        width: 99%;
+        padding: 30px 10px;
+    }
+
+    .sobremi h2 {
+        font-size: 45px;
+        padding: 10px 0;
+    }
+
+    .sobremi .contenido-sobremi p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .contenido-seccion {
+        padding: 10px;
+    }
+
+    .contenido-seccion h2 {
+        font-size: 1.5rem;
     }
 }
