@@ -104,7 +104,6 @@ const translations = {
 };
 
 // Función para cambiar el idioma
-// Función para cambiar el idioma
 function changeLanguage(language) {
   // Cambiar el texto de todos los elementos con el atributo 'data-translate'
   const elements = document.querySelectorAll("[data-translate]");
@@ -125,7 +124,7 @@ function changeLanguage(language) {
   });
 
   const placeholders = document.querySelectorAll(
-    "input[placeholder], textarea[placeholder]"
+    "input[placeholder], textarea[placeholder]",
   );
   placeholders.forEach((input) => {
     const placeholderKey = `placeholder${
@@ -192,8 +191,8 @@ document
       function (error) {
         console.log("Error al enviar el correo", error);
         alert(
-          "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo."
+          "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.",
         );
-      }
+      },
     );
   });
